@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Update Contact</h2>
+
+<form method="POST">
+  <input type="text" name="name" value="{{ contact.name }}"><br><br>
+  <input type="email" name="email" value="{{ contact.email }}"><br><br>
+  <input type="text" name="phone" value="{{ contact.number }}"><br><br>
+  <textarea name="message">{{ contact.message }}</textarea><br><br>
+  <button type="submit">Update</button>
+</form>
+
+<a href="/admin/dashboard">Back</a>
+{% endblock %}
